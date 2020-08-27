@@ -83,3 +83,7 @@ To check your free space, enter your XOA and run `xoa check` to check free syste
 This is happening when you have a _smart backup job_ that doesn't match any VMs. For example: you created a job to backup all running VMs. If no VMs are running on backup schedule, you'll have this message. This could also happen if you lost connection with your pool master (the VMs aren't visible anymore from Xen Orchestra).
 
 Edit your job and try to see matching VMs or check if your pool is connected to XOA.
+
+## Error: SR_OPERATION_NOT_SUPPORTED
+
+This message appears when a USB device is passthrough to the VM you are trying to create backup/snapshot. Detaching the device from the VM should let you finish your backup/snapshot.
